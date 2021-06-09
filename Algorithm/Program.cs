@@ -19,7 +19,7 @@ namespace Algorithm
             while (true)
             {
                 #region 프레임 관리 //경과 시간을 알고 싶어서 사용한것
-                int currentTick = System.Environment.TickCount; //단위가 밀리세컨드
+                int currentTick = Environment.TickCount & Int32.MaxValue; //단위가 밀리세컨드
                 //만약에 경과한 시간이 1/30초보다 작다면
                 if (currentTick - lastTick < WAIT_TICK)
                     continue;
