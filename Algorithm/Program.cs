@@ -6,6 +6,10 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
+            Board board = new Board();
+            board.Initialize();
+
+
             Console.CursorVisible = false;
 
             const int WAIT_TICK = 1000 / 30; //  1/30인데 1이 밀리세컨드라서 1000
