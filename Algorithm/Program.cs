@@ -7,13 +7,13 @@ namespace Algorithm
         static void Main(string[] args)
         {
             Board board = new Board();
-            board.Initialize();
+            board.Initialize(25);
 
 
             Console.CursorVisible = false;
 
             const int WAIT_TICK = 1000 / 30; //  1/30인데 1이 밀리세컨드라서 1000
-            const char CIRCLE = '\u25cf';
+            
 
             int lastTick = 0;
             while (true)
@@ -31,16 +31,9 @@ namespace Algorithm
 
                 // 렌더링
                 Console.SetCursorPosition(0, 0);
+                board.Render();
                 
-                for(int i = 0; i < 25; i++)
-                {
-                    for(int j = 0; j < 25; j++)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(CIRCLE);
-                    }
-                    Console.WriteLine();
-                }
+               
             }
             
             
