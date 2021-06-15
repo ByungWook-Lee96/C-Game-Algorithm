@@ -146,6 +146,8 @@ namespace Algorithm
                     // 플레이어 좌표를 갖고 와서, 그 좌표랑 현재 y, x가 일치하면 플레이전용 색상으로 표시
                     if (y == _player.PosY && x == _player.PosX)
                         Console.ForegroundColor = ConsoleColor.Blue;
+                    else if (y == DestY && x == DestX)
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                     else
                         Console.ForegroundColor = GetTileColor(Tile[y, x]);
 
